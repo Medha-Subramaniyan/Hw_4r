@@ -7,7 +7,7 @@ str(College)
 summary(College)
 
 # Part a----------
-set.seed(123)  # For reproducibility
+set.seed(123) 
 n <- nrow(College)
 train_indices <- sample(1:n, size = 0.7 * n)  # 70% for training
 train_data <- College[train_indices, ]
@@ -37,12 +37,10 @@ best_lambda_1se <- cv_lasso$lambda.1se
 cat("Best lambda (min MSE):", best_lambda_min, "\n")
 cat("Best lambda (1SE rule):", best_lambda_1se, "\n")
 
-# Plot cross-validation results
+# Plot cross validation results
 plot(cv_lasso)
 
 # Part d:----------
-# on the test data and compute test MSE
-
 #  predictions using lambda.min  
 pred_lasso_min <- predict(lasso_fit, s = best_lambda_min, newx = test_x)
 test_mse_min <- mean((test_y - pred_lasso_min)^2)
@@ -55,7 +53,7 @@ cat("Test MSE using lambda.1se:", test_mse_1se, "\n")
 
 #  coefficients for the best model
 coef_lasso <- coef(lasso_fit, s = best_lambda_min)
-cat("Number of non-zero coefficients:", sum(coef_lasso != 0) - 1, "\n")  # -1 for intercept
+cat("Number of non-zero coefficients:", sum(coef_lasso != 0) - 1, "\n") 
 #nonzeros
 non_zero_coef <- coef_lasso[coef_lasso != 0]
 cat("Non-zero coefficients:\n")

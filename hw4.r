@@ -1,4 +1,4 @@
-#PART 1 letters A-D ZANDER ANDERSON 
+
 
 library(glmnet)
 library(ISLR)

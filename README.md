@@ -1,4 +1,4 @@
-# Homework 4: LASSO Regression Analysis
+#  LASSO Regression Analysis
 
 ## Project Overview
 This project implements LASSO (Least Absolute Shrinkage and Selection Operator) regression analysis on two different datasets: College admissions data and Major League Baseball player salary data. The project demonstrates the application of regularization techniques in statistical learning and compares LASSO performance with ordinary least squares regression.
@@ -83,8 +83,7 @@ This project helps understand:
 - Model comparison and evaluation
 - Variable selection and coefficient interpretation
 
-## Author
-Zander Anderson
+
 
 ## Course
 Statistical Learning/Data Science course (Homework 4)

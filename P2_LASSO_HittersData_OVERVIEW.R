@@ -1,25 +1,5 @@
 
 
-###########################  FI 4090 #####################################################################
-#########################  Introduction to Data Analytics ################################################
-######################## Created by: Rasha Ashraf  #######################################################
-
-
-###############################################################################################################################
-
-#### Dimension Reduction Methods:  Lasso (Least Absolute Shrinkage and Selection Operator) ####################################
-
-
-###############################  PROGRAM 1   ##################################################################################
-
-# JWHT: Chapter 6  ############################################################################################################
-
-###############################################################################################################################
-
-
-#### We apply the variable selection methods:  Lasso on the "Hitters" data
-####  We want to predict a baseball player's salary 
-#### on the basis of various statistics associated with performance in the previous year  
 
 library(ISLR)
 fix(Hitters)
@@ -43,13 +23,13 @@ attach(Hitters)
 # CRuns Number of runs during his career
 # CRBI Number of runs batted in during his career
 # CWalks Number of walks during his career
-# League A factor with levels A (American League) and N (National League) indicating player’s league at the end of 1986
-# Division A factor with levels E and W indicating player’s division at the end of 1986
+# League A factor with levels A (American League) and N (National League) indicating playerâ€™s league at the end of 1986
+# Division A factor with levels E and W indicating playerâ€™s division at the end of 1986
 # PutOuts Number of put outs in 1986
 # Assists Number of assists in 1986
 # Errors Number of errors in 1986
 # Salary 1987 annual salary on opening day in thousands of dollars
-# NewLeague A factor with levels A and N indicating player’s league at the beginning of 1987
+# NewLeague A factor with levels A and N indicating playerâ€™s league at the beginning of 1987
 
 
 ### Salary variable is missing for some of the players. 
@@ -211,6 +191,7 @@ yhat_lm_lasso=predict(lm.fit.lasso,newdata=Hitters[-train,])
 
 ### MSE associated with the linear regression using predictors chosen by LASSO. LASSO TEST MSE is significantly reduced
 mean((yhat_lm_lasso-y.test)^2)
+
 
 
 
